@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from './SearchBar';
+import { useState } from 'react';
+import handleUpdateOther from './helper';
 
 function App() {
+  const [data, setData] = useState("");
+  const handleUpdate = () => {
+    setData("hello");
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+      <SearchBar/>
     </div>
   );
 }
 
+// <input type='text' defaultValue="Hello" data-testid="inputHello" disabled/><br/>
+//     <button data-testid="btn1" onClick={handleUpdate}>Update Text</button>
+//     <button onClick={handleUpdateOther}>Click Me</button>
+//     {data}
 export default App;
